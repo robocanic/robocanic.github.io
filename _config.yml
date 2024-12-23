@@ -6,6 +6,7 @@ author: Robocanic
 language: zh-CN
 timezone: Asia/Shanghai
 url: https://robocanic.github.io
+root: /
 permalink: ":year/:month/:day/:title/"
 permalink_defaults: null
 pretty_urls:
@@ -58,7 +59,7 @@ pagination_dir: page
 include: null
 exclude: null
 ignore: null
-theme: icarus
+theme: Chic
 deploy:
   type: git
   repo: git@github.com:robocanic/robocanic.github.io.git

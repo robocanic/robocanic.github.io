@@ -1,35 +1,229 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>第一篇博客，我眼中的云原生 - Robocanic的博客</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Robocanic的博客"><meta name="msapplication-TileImage" content="https://image.robocanic.com/"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Robocanic的博客"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="很多小伙伴刚一开始看到“云原生“三个字时都会有点懵，当然彼时的我也不例外。在这篇文章中，我将从”云原生是个啥“，”云原生和我有啥关系“，“云原生的未来”这三个方面来展现我眼中的云原生，希望对你有所帮助。 云原生是个啥在说云原生之前，不得不先来谈谈云计算和微服务。云计算是一种托管在远程数据中心的服务，在今天已经相当普遍了。云计算由亚马逊在 2006 年首先推出，主打的卖点就是云的高弹性，高容错，免（"><meta property="og:type" content="blog"><meta property="og:title" content="第一篇博客，我眼中的云原生"><meta property="og:url" content="https://robocanic.github.io/2024/06/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%BA%91%E5%8E%9F%E7%94%9F/"><meta property="og:site_name" content="Robocanic的博客"><meta property="og:description" content="很多小伙伴刚一开始看到“云原生“三个字时都会有点懵，当然彼时的我也不例外。在这篇文章中，我将从”云原生是个啥“，”云原生和我有啥关系“，“云原生的未来”这三个方面来展现我眼中的云原生，希望对你有所帮助。 云原生是个啥在说云原生之前，不得不先来谈谈云计算和微服务。云计算是一种托管在远程数据中心的服务，在今天已经相当普遍了。云计算由亚马逊在 2006 年首先推出，主打的卖点就是云的高弹性，高容错，免（"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://image.robocanic.com/notes/k8s.svg"><meta property="article:published_time" content="2024-06-10T12:21:39.000Z"><meta property="article:modified_time" content="2024-12-21T14:10:22.950Z"><meta property="article:author" content="Robocanic"><meta property="article:tag" content="云原生"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://image.robocanic.com/notes/k8s.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://robocanic.github.io/2024/06/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%BA%91%E5%8E%9F%E7%94%9F/"},"headline":"第一篇博客，我眼中的云原生","image":[],"datePublished":"2024-06-10T12:21:39.000Z","dateModified":"2024-12-21T14:10:22.950Z","author":{"@type":"Person","name":"Robocanic"},"publisher":{"@type":"Organization","name":"Robocanic的博客","logo":{"@type":"ImageObject","url":"https://image.robocanic.com/blog%E5%A4%B4%E5%83%8F-colored.svg"}},"description":"很多小伙伴刚一开始看到“云原生“三个字时都会有点懵，当然彼时的我也不例外。在这篇文章中，我将从”云原生是个啥“，”云原生和我有啥关系“，“云原生的未来”这三个方面来展现我眼中的云原生，希望对你有所帮助。 云原生是个啥在说云原生之前，不得不先来谈谈云计算和微服务。云计算是一种托管在远程数据中心的服务，在今天已经相当普遍了。云计算由亚马逊在 2006 年首先推出，主打的卖点就是云的高弹性，高容错，免（"}</script><link rel="canonical" href="https://robocanic.github.io/2024/06/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%BA%91%E5%8E%9F%E7%94%9F/"><link rel="icon" href="https://image.robocanic.com/blog%E5%A4%B4%E5%83%8F-colored.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+    <meta name="author" content="Robocanic">
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="https://image.robocanic.com/blog%E5%A4%B4%E5%83%8F-colored.svg" alt="Robocanic的博客" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于我</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="follow me on GitHub" href="https://github.com/robocanic"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://image.robocanic.com/notes/k8s.svg" alt="第一篇博客，我眼中的云原生"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-06-10T12:21:39.000Z" title="2024/6/10 20:21:39">2024-06-10</time>发表</span><span class="level-item"><time dateTime="2024-12-21T14:10:22.950Z" title="2024/12/21 22:10:22">2024-12-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</a></span><span class="level-item">15 分钟读完 (大约2322个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">第一篇博客，我眼中的云原生</h1><div class="content"><p>很多小伙伴刚一开始看到“云原生“三个字时都会有点懵，当然彼时的我也不例外。在这篇文章中，我将从”云原生是个啥“，”云原生和我有啥关系“，“云原生的未来”这三个方面来展现我眼中的云原生，希望对你有所帮助。</p>
+    <meta name="subtitle" content="Robocanic的小屋">
+
+
+
+    <meta name="keywords" content="大模型,云原生,LLM,AIGC,Langchain,Langgraph,Spring AI">
+
+
+<title>第一篇博客，我眼中的云原生 | Robocanic的博客</title>
+
+
+
+    <link rel="icon" href="https://image.robocanic.com/blog%E5%A4%B4%E5%83%8F-colored.svg">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    <script>
+      // this function is used to check current theme before page loaded.
+      (() => {
+        const currentTheme = (window.localStorage && window.localStorage.getItem("theme")) || "";
+        const isDark = currentTheme === "dark";
+        const pagebody = document.getElementsByTagName("body")[0];
+        if (isDark) {
+          pagebody.classList.add("dark-theme");
+          // mobile
+          document.getElementById("mobile-toggle-theme").innerText = "· Dark";
+        } else {
+          pagebody.classList.remove("dark-theme");
+          // mobile
+          document.getElementById("mobile-toggle-theme").innerText = "· Light";
+        }
+      })();
+    </script>
+
+    <div class="wrapper">
+      <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Robocanic&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Robocanic&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+      <div class="main"><div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    var tocbot_timer;
+    var DEPTH_MAX = 6; // 为 6 时展开所有
+    var tocbot_default_config = {
+        tocSelector: '.tocbot-list',
+        contentSelector: '.post-content',
+        headingSelector: 'h1, h2, h3, h4, h5',
+        orderedList: false,
+        scrollSmooth: true,
+        onClick: extend_click,
+    };
+
+    function extend_click() {
+        clearTimeout(tocbot_timer);
+        tocbot_timer = setTimeout(function() {
+            tocbot.refresh(obj_merge(tocbot_default_config, {
+                hasInnerContainers: true
+            }));
+        }, 420); // 这个值是由 tocbot 源码里定义的 scrollSmoothDuration 得来的
+    }
+
+    document.ready(function() {
+        tocbot.init(obj_merge(tocbot_default_config, {
+            collapseDepth: 1
+        }));
+    });
+
+    function expand_toc() {
+        var b = document.querySelector('.tocbot-toc-expand');
+        var expanded = b.getAttribute('data-expanded');
+        expanded ? b.removeAttribute('data-expanded') : b.setAttribute('data-expanded', true);
+        tocbot.refresh(obj_merge(tocbot_default_config, {
+            collapseDepth: expanded ? 1 : DEPTH_MAX
+        }));
+        b.innerText = expanded ? 'Expand all' : 'Collapse all';
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function obj_merge(target, source) {
+        for (var item in source) {
+            if (source.hasOwnProperty(item)) {
+                target[item] = source[item];
+            }
+        }
+        return target;
+    }
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">第一篇博客，我眼中的云原生</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Robocanic</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">六月 10, 2024&nbsp;&nbsp;20:21:39</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>很多小伙伴刚一开始看到“云原生“三个字时都会有点懵，当然彼时的我也不例外。在这篇文章中，我将从”云原生是个啥“，”云原生和我有啥关系“，“云原生的未来”这三个方面来展现我眼中的云原生，希望对你有所帮助。</p>
 <h1 id="云原生是个啥"><a href="#云原生是个啥" class="headerlink" title="云原生是个啥"></a>云原生是个啥</h1><p>在说云原生之前，不得不先来谈谈云计算和微服务。云计算是一种托管在远程数据中心的服务，在今天已经相当普遍了。云计算由亚马逊在 2006 年首先推出，主打的卖点就是云的高弹性，高容错，免（少）运维，比自建机房更便宜等优点。随后各大云厂商如 Google，微软，阿里巴巴等迅速跟进，建立了 Iaas，Paas，Saas 等对云基础设施不同抽象层次的服务体系，在 08 到 16 年掀起了一波上云的浪潮。</p>
 <p><img src="https://image.robocanic.com/notes/image-vbfj.png" alt="xaas"></p>
 <p>在这波浪潮推动的同时，微服务由于其易于扩展，开发敏捷，人效利用高等优点也大行其道。但是在浪潮过后，已经上云的企业又发现一些棘手的问题：</p>
@@ -55,48 +249,85 @@
 <p><img src="https://image.robocanic.com/notes/image.png" alt="CNAI"></p>
 <p>写在最后：</p>
 <p>想了很久第一篇博客要写些什么，前前后后想了一周，最后还是敲定了一个比较大的 title，希望对你有所帮助。文章内容如有错误，请老师们评论区勘误 😁😁。后续将会持续更新云原生，LLM 等领域的内容。</p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>第一篇博客，我眼中的云原生</p><p><a href="https://robocanic.github.io/2024/06/10/第一篇博客，我眼中的云原生/">https://robocanic.github.io/2024/06/10/第一篇博客，我眼中的云原生/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Robocanic</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-06-10</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-12-21</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</a></div><!--!--></article></div><!--!--><div class="card" id="comments"><div class="card-content"><h3 class="title is-5">评论</h3><script src="https://giscus.app/client.js" repo="robocanic/robocanic.github.io" data-repo="robocanic/robocanic.github.io" data-repo-id="R_kgDONDf33A" data-category-id="DIC_kwDONDf33M4Claii" data-category="Q&amp;A" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous" async></script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://image.robocanic.com/blog%E5%A4%B4%E5%83%8F-colored.svg" alt="Robocanic"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Robocanic</p><p class="is-size-6 is-block">CloudNative, LLM</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>湖南，长沙</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives/"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories/"><p class="title">1</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags/"><p class="title">1</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/robocanic" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/robocanic"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/06/"><span class="level-start"><span class="level-item">六月 2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/"><span class="tag">云原生</span><span class="tag">1</span></a></div></div></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#云原生是个啥"><span class="level-left"><span class="level-item">1</span><span class="level-item">云原生是个啥</span></span></a></li><li><a class="level is-mobile" href="#云原生和我有啥关系"><span class="level-left"><span class="level-item">2</span><span class="level-item">云原生和我有啥关系</span></span></a></li><li><a class="level is-mobile" href="#云原生的未来"><span class="level-left"><span class="level-item">3</span><span class="level-item">云原生的未来</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2024/06/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%BA%91%E5%8E%9F%E7%94%9F/"><img src="https://image.robocanic.com/notes/k8s.svg" alt="第一篇博客，我眼中的云原生"></a></figure><div class="media-content"><p class="date"><time dateTime="2024-06-10T12:21:39.000Z">2024-06-10</time></p><p class="title"><a href="/2024/06/10/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%88%91%E7%9C%BC%E4%B8%AD%E7%9A%84%E4%BA%91%E5%8E%9F%E7%94%9F/">第一篇博客，我眼中的云原生</a></p><p class="categories"><a href="/categories/%E4%BA%91%E5%8E%9F%E7%94%9F/">云原生</a></p></div></article></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="https://image.robocanic.com/blog%E5%A4%B4%E5%83%8F-colored.svg" alt="Robocanic的博客" height="28"></a><p class="is-size-7"><span>&copy; 2024 Robocanic</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2024</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/robocanic"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Robocanic</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2025 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E4%BA%91%E5%8E%9F%E7%94%9F/"># 云原生</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+        </section>
+
+
+    </article>
+</div>
+ 
+<div id="giscus-container"></div>
+<script
+  src="https://giscus.app/client.js"
+  data-repo="robocanic/robocanic.github.io"
+  data-repo-id="R_kgDONDf33A"
+  data-category="Q&A"
+  data-category-id="DIC_kwDONDf33M4Claii"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="zh-CN"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
+ 
+</div>
+      <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Robocanic | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+  </body>
+</html>
