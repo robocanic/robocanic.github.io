@@ -65,7 +65,11 @@ deploy:
   repo: git@github.com:robocanic/robocanic.github.io.git
   branch: master
   message: new article
+  ignore_hidden: false
 hexo_seo_autopush:
+  cron: 0 4 * * *
+  deployBranch: master
   baidu:
     enable: true
+    date: created
     count: 10
