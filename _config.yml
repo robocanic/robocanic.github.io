@@ -65,3 +65,7 @@ deploy:
   repo: git@github.com:robocanic/robocanic.github.io.git
   branch: master
   message: new article
+hexo_seo_autopush:
+  baidu:
+    enable: true
+    count: 10
