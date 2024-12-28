@@ -1,7 +1,7 @@
 ---
 title: Python工程化不完全指南
 date: 2024-7-06 21:37:12
-tags: Python
+tags: Python, 日常开发
 categories: 日常开发
 ---
 
