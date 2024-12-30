@@ -23,7 +23,8 @@ jobs:
 
       - name: google push
         run: npx hexoautopush ${{secrets.google_client_email}} ${{secrets.google_private_key}}
-      
+      - name: Debug baidu_token
+        run: echo "Baidu Token: ${{secrets.baidu_token}}"
       - name: bing push
         run: curl -X POST "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlBatch?apikey=${{secrets.bing_apikey}}" -H "Content-Type:application/json" -H "charset:utf-8" -d @bing.json
 
